@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
+<!-- Author: Rodrigo Garay -->
+<!-- Email: 2133321@csfoy.ca -->
 
 <head>
     <meta charset="UTF-8">
@@ -7,17 +9,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Auberge du jacana africain</title>
-
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+    <a href="#contenu" class="screen-reader-only focusable"> Allez au contenu</a>
     <header>
-        <a href="index.html">
-            <p><img src="images/logo-jacana.png" alt=""></p>
+        <a class="image_titre" href="../index.html">
+            <p><img class="image_principal" src="../images/logo-jacana.png" alt=""></p>
             <p class="titre">Auberge du jacana africain</p>
         </a>
         <!-- Ajouter un menu : Accueil, Historique, Région, Contact, Réservation -->
-        <p> <a href="index.html">accueil</a> | <a href="reservation/index.html">réservation</a> </p>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__list-item">
+                    <a href="index.html" class="nav__link nav__link--active">Accueil</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#" class="nav__link">Historique</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#" class="nav__link">Région</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="reservation/index.html" class="nav__link">Réservation</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#" class="nav__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <blockquote>
         <p class="accroche">
@@ -30,64 +51,73 @@
     </blockquote>
 
     <div id="carrousel">
-
-        <!-- C'est la mer allée avec le soleil. -->
-        <!-- frank-mckenna-eXHeq48Z-Q4-unsplash -->
-        <img src="image1.jpg" alt="Image 1">
-        Photo de <a
-            href="https://unsplash.com/@frankiefoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">frank
-            mckenna</a> sur <a
-            href="https://unsplash.com/fr/s/photos/bord-de-mer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-        <!-- La salle à manger. Déjeûner de 7h30 à 10h. -->
-        <!-- alessandra-caretto-o3c-euNd_ZM-unsplash -->
-        <img src="image2.jpg" alt="Image 2">
-        Photo de <a
-            href="https://unsplash.com/de/@alessandracaretto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alessandra
-            Caretto</a> sur <a
-            href="https://unsplash.com/fr/s/photos/chambre-chalet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-        <!-- Une sortie en kayak de mer. -->
-        <!-- kirsten-miles-D5Fzg9KVfg4-unsplash -->
-        <img src="image3.jpg" alt="Image 3">
-        Photo de <a
-            href="https://unsplash.com/fr/@sirole?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kirsten
-            Miles</a> sur <a
-            href="https://unsplash.com/fr/s/photos/kayak-de-mer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-        <!-- Chambres à coucher avec vue. -->
-        <!-- kenny-eliason-iAftdIcgpFc-unsplash -->
-        <img src="image4.jpg" alt="Image 4">
-        Photo de <a
-            href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kenny
-            Eliason</a> sur <a
-            href="https://unsplash.com/fr/s/photos/lit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-        <!-- Hamacs, coin détente et feu extérieur. -->
-        <!-- ris-ry-Kc4MGyzfOTI-unsplash -->
-        <img src="image5.jpg" alt="Image 5">
-        Photo de <a
-            href="https://unsplash.com/ko/@risandry?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ris
-            & Ry</a> sur <a
-            href="https://unsplash.com/fr/s/photos/hamac?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-        <!-- L'auberge. -->
-        <!-- phare-de-pointe-a-la-renommee -->
-        <img src="image6.jpg" alt="Image 6">
-        <!-- Phare de la pointe à la renommée. https://www.flickr.com/photos/airflore/ -->
-
-        <!-- Observation des oiseaux de rivage -->
-        <!-- PIXNIO-80683-4600x3450 -->
-        <img src="image7.jpg" alt="Image 7">
-        <!-- Créateur : Karney Lee, USFWS Crédits : Pixnio  -->
-
-        <!-- Volée de Jacanas -->
-        <img src="image8.jpg" alt="Image 8">
-        Photo de <a
-            href="https://unsplash.com/@sradams57?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Steve
-            Adams</a> sur <a
-            href="https://unsplash.com/fr/s/photos/oiseaux-de-rivage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
+        <ul class="carrousel__liste">
+            <li class="carrousel__slide carrousel__slide--active">
+                <!-- C'est la mer allée avec le soleil. -->
+                <!-- frank-mckenna-eXHeq48Z-Q4-unsplash -->
+                <img src="images/carrousel/frank-mckenna-eXHeq48Z-Q4-unsplash.jpg" alt="Image 1"><br>
+                Photo de <a
+                    href="https://unsplash.com/@frankiefoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">frank
+                    mckenna</a> sur <a
+                    href="https://unsplash.com/fr/s/photos/bord-de-mer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </li>
+            <li class="carrousel__slide">
+                <!-- La salle à manger. Déjeûner de 7h30 à 10h. -->
+                <!-- alessandra-caretto-o3c-euNd_ZM-unsplash -->
+                <img src="images/carrousel/alessandra-caretto-o3c-euNd_ZM-unsplash.jpg" alt="Image 2"><br>
+                Photo de <a
+                    href="https://unsplash.com/de/@alessandracaretto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alessandra
+                    Caretto</a> sur <a
+                    href="https://unsplash.com/fr/s/photos/chambre-chalet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </li>
+            <li class="carrousel__slide">
+                <!-- Une sortie en kayak de mer. -->
+                <!-- kirsten-miles-D5Fzg9KVfg4-unsplash -->
+                <img src="images/carrousel/kirsten-miles-D5Fzg9KVfg4-unsplash.jpg" alt="Image 3"><br>
+                Photo de <a
+                    href="https://unsplash.com/fr/@sirole?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kirsten
+                    Miles</a> sur <a
+                    href="https://unsplash.com/fr/s/photos/kayak-de-mer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </li>
+            <li class="carrousel__slide">
+                <!-- Chambres à coucher avec vue. -->
+                <!-- kenny-eliason-iAftdIcgpFc-unsplash -->
+                <img src="images/carrousel/kenny-eliason-iAftdIcgpFc-unsplash.jpg" alt="Image 4"><br>
+                Photo de <a
+                    href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kenny
+                    Eliason</a> sur <a
+                    href="https://unsplash.com/fr/s/photos/lit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </li>
+            <li class="carrousel__slide">
+                <!-- Hamacs, coin détente et feu extérieur. -->
+                <!-- ris-ry-Kc4MGyzfOTI-unsplash -->
+                <img src="images/carrousel/ris-ry-Kc4MGyzfOTI-unsplash.jpg" alt="Image 5"><br>
+                Photo de <a
+                    href="https://unsplash.com/ko/@risandry?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ris
+                    & Ry</a> sur <a
+                    href="https://unsplash.com/fr/s/photos/hamac?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </li>
+            <li class="carrousel__slide">
+                <!-- L'auberge. -->
+                <!-- phare-de-pointe-a-la-renommee -->
+                <img src="images/carrousel/phare-de-pointe-a-la-renommee.jpg" alt="Image 6"><br>
+                <!-- Phare de la pointe à la renommée. https://www.flickr.com/photos/airflore/ -->
+            </li>
+            <li class="carrousel__slide">
+                <!-- Observation des oiseaux de rivage -->
+                <!-- PIXNIO-80683-4600x3450 -->
+                <img src="images/carrousel/PIXNIO-80683-4600x3450.jpeg" alt="Image 7"><br>
+                <!-- Créateur : Karney Lee, USFWS Crédits : Pixnio  -->
+            </li>
+            <li class="carrousel__slide">
+                <!-- Volée de Jacanas -->
+                <img src="images/carrousel/steve-adams-rrXVPg12wno-unsplash.jpg" alt="Image 8"><br>
+                Photo de <a
+                    href="https://unsplash.com/@sradams57?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Steve
+                    Adams</a> sur <a
+                    href="https://unsplash.com/fr/s/photos/oiseaux-de-rivage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </li>
+        </ul>
     </div>
 
     <div id="onglets">
@@ -170,7 +200,23 @@
             programme des <a href="">Techniques d'intégration multimédia</a>,
             <a href="">Cégep de Sainte-Foy</a>.
         </p>
+        <ul class="menu-sociaux">
+            <li class="menu-sociaux__item">
+                <a class="menu-sociaux__lien" href="https://www.facebook.com">Facebook</a>
+            </li>
+            <li class="menu-sociaux__item">
+                <a class="menu-sociaux__lien" href="https://twitter.com">Twitter</a>
+            </li>
+            <li class="menu-sociaux__item">
+                <a class="menu-sociaux__lien" href="https://www.youtube.com">YouTube</a>
+            </li>
+            <li class="menu-sociaux__item">
+                <a class="menu-sociaux__lien" href="https://www.instagram.com">Instagram</a>
+            </li>
+        </ul>
     </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

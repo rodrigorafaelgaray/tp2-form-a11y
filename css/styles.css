@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Roboto+Slab:wght@100;300;400&display=swap');
+
+@import url(normalize.css);
+@import url(utilitaires.css);
+@import url(typo.css);
+@import url(grille.css);
+@import url(composants/menu.css);
+
+/**
+ * TABLE DES MATIÈRES
+    - Style general
+    - Header
+    - Reservation
+        - Boutons Radios
+        - Choix Chambres
+        - Focus
+    - Gestion des erreurs
+    - Aside
+    - Footer
+    - Carousel (Javascript)
+ */
+
+
+/* Style general */
+
+body{
+    color: var(--couleur-texte);
+}
+
+h1, h2, h3{
+    color: var(--couleur-titres-h1-h3);
+}
+
+a{
+    text-decoration-color: darkcyan;
+}
+
+main{
+    width: 90%;
+    margin: auto;
+}
+
+
+/* Header */
+
+header{
+    background-color: var(--couleur-dominante);
+}
+
+.image_titre{
+    display: flex;
+    flex-direction: row;
+}
+
+.image_principal{
+    border: 5px solid var(--couleur-titres-h1-h3);
+    border-radius: 30em;
+    background-color: var(--bg-couleur-contraste);
+    padding: 1em;
+    margin-right: 3em;
+}
+
+.titre{
+    font-size: 4em;
+    color: var(--couleur-titres-h1-h3);
+}
+
+.titre:hover, .titre:focus{
+    font-weight: bold;
+}
+
+.nav__list-item{
+    background-color: var(--bg-couleur-contraste);
+}
+
+/* Reservation */
+h1, h2{
+    margin-bottom: 0;
+}
+
+    /* Boutons radio */
+    li::marker {
+        color: transparent;
+    }
+
+    /* Choix Chambres */
+    .prix {
+        display: block;
+    }
+
+    .forfait img {
+        width: 100%;
+    }
+
+    .forfait .row {
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .forfait-type-chambre {
+        flex-basis: 33%;
+        margin: 0.25rem;
+    }
+
+    .forfait-type-chambre img {
+        filter: grayscale();
+    }
+
+    .forfait-type-chambre [type="radio"]+label {
+        padding: 1rem;
+    }
+
+    .forfait-type-chambre [type="radio"]:focus+label,
+    .forfait-type-chambre [type="radio"]:checked+label {
+        background-color: var(--couleur-form);
+        font-weight: bold;
+    }
+
+    .forfait-type-chambre [type="radio"]:focus+label img,
+    .forfait-type-chambre [type="radio"]:checked+label img,
+    .forfait-type-chambre [type="radio"]:hover+label img {
+        filter: none;
+        border: 1em solid var(--couleur-dominante);
+    }
+
+    .case-a-cocher [type="checkbox"] {
+        margin-right: 0.5rem;
+    }
+
+    .forfait-type-chambre label{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .forfait-type-chambre label img{
+        width: auto;
+        height: auto;
+    }
+
+
+    /* Focus */
+    input:focus,
+    textarea:focus,
+    keygen:focus,
+    select:focus {
+        outline-offset: 3px;
+    }
+
+    :focus {
+        outline: none;
+        box-shadow: 3px 3px 1px 1px var(--couleur-dominante);
+    }
+
+    button:focus {
+        box-shadow: var(--couleur-dominante);
+    }
+
+/* Gestion des erreurs */
+.erreur {
+    /* display: none; */
+}
+
+.icone {
+    display: inline-block;
+    width: 26px;
+    height: 24px;
+    background-image: url("../images/icones/good-warning-error.png");
+    background-size: cover;
+    position: relative;
+    top: 5px;
+}
+
+.icone--ok {
+    background-position: 0 0;
+}
+
+.icone--avertissement {
+    background-position: 49px 0;
+}
+
+.icone--erreur {
+    background-position: 101px 0;
+}
+
+/* Aside */
+aside{
+    background-color: rgb(0, 58, 0);
+    padding: .5em;
+    color: var(--couleur-dominante);
+}
+
+aside h2, aside h3{
+    color: var(--couleur-dominante);
+}
+
+/* Footer */
+footer{
+    background-color: var(--couleur-dominante);
+    text-align: center;
+}
+
+/* Menu sociaux */
+.menu-sociaux {
+    margin: 1rem 3rem 3rem 3rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-sociaux__lien:link,
+.menu-sociaux__lien:visited {
+    font-size: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    background-image: url(http://www.hautemontagne.ca/images/icones-social-sprite-w212.png);
+    background-repeat: no-repeat;
+    transition: transform .3s ease-in-out;
+}
+
+.menu-sociaux__item:first-child .menu-sociaux__lien {
+    background-position: 0 0;
+}
+
+.menu-sociaux__item:nth-child(2) .menu-sociaux__lien {
+    background-position: -52.5px 0;
+}
+
+.menu-sociaux__item:nth-child(3) .menu-sociaux__lien {
+    background-position: -105px 0;
+}
+
+.menu-sociaux__item:nth-child(4) .menu-sociaux__lien {
+    background-position: -157px 0;
+}
+
+.menu-sociaux__item .menu-sociaux__lien:hover,
+.menu-sociaux__item .menu-sociaux__lien:active {
+    background-position-y: -55px;
+    transform: rotate(10deg);
+}
+
+/* Carrousel */
+.carrousel {
+    position: relative;
+}
+
+.carrousel__slide img{
+    width: 70%;
+    height: 70%;
+}
+
+.js .carrousel__slide {
+    display: none;
+}
+
+.js .carrousel__slide.carrousel__slide--active {
+    display: block;
+}
+
+    /* Boutons */
+    .js .bouton {
+        background-color: transparent;
+        border: none;
+        transition: all 0.3s ease-in-out;
+        width: 50px;
+    }
+
+    .js .bouton:hover {
+        cursor: pointer;
+    }
+
+    .js .bouton__svg {
+        fill: var(--couleur-bouton);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .js .bouton:hover .bouton__svg {
+        fill: var(--couleur-bouton-hover);
+        transform: scale(1.03);
+    }
+
+    .js .bouton:focus {
+        outline: 1px solid var(--couleur-bouton);
+    }
+
+    .js .bouton:focus .bouton__svg {
+        fill: var(--couleur-bouton-hover);
+        transform: scale(1.03);
+    }
